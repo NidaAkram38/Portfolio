@@ -1,0 +1,145 @@
+<section id="projects">
+  <div class="fade-up">
+    <span class="section-label">My Work</span>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-sub">Click "Live Preview" on any project to see it running right here.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="projects-grid fade-up">
+
+    <!-- ── PROJECT 1 ── -->
+    <div class="project-card">
+      <div class="project-preview-wrap">
+        <iframe
+          class="project-preview"
+          src="about:blank"
+          data-src="https://YOUR_USERNAME.github.io/project-1"
+          title="Project 1 preview"
+          loading="lazy">
+        </iframe>
+        <div class="project-preview-overlay">
+          <button class="preview-launch-btn"
+            onclick="openModal('Project One', 'https://YOUR_USERNAME.github.io/project-1')">
+            ▶ Launch Preview
+          </button>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Project One</div>
+        <div class="project-desc">
+          A short description of what this project does and the problem it solves.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="openModal('Project One', 'https://YOUR_USERNAME.github.io/project-1')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/project-1"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 2 ── -->
+    <div class="project-card">
+      <div class="project-preview-wrap">
+        <iframe
+          class="project-preview"
+          src="about:blank"
+          data-src="https://YOUR_USERNAME.github.io/project-2"
+          title="Project 2 preview"
+          loading="lazy">
+        </iframe>
+        <div class="project-preview-overlay">
+          <button class="preview-launch-btn"
+            onclick="openModal('Project Two', 'https://YOUR_USERNAME.github.io/project-2')">
+            ▶ Launch Preview
+          </button>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Node</span>
+        </div>
+        <div class="project-name">Project Two</div>
+        <div class="project-desc">
+          A short description of what this project does and the problem it solves.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="openModal('Project Two', 'https://YOUR_USERNAME.github.io/project-2')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/project-2"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 3 ── -->
+    <div class="project-card">
+      <div class="project-preview-wrap">
+        <iframe
+          class="project-preview"
+          src="about:blank"
+          data-src="https://YOUR_USERNAME.github.io/project-3"
+          title="Project 3 preview"
+          loading="lazy">
+        </iframe>
+        <div class="project-preview-overlay">
+          <button class="preview-launch-btn"
+            onclick="openModal('Project Three', 'https://YOUR_USERNAME.github.io/project-3')">
+            ▶ Launch Preview
+          </button>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Flask</span>
+        </div>
+        <div class="project-name">Project Three</div>
+        <div class="project-desc">
+          A short description of what this project does and the problem it solves.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="openModal('Project Three', 'https://YOUR_USERNAME.github.io/project-3')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/project-3"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Live Preview Modal -->
+  <div class="modal-overlay" id="previewModal" onclick="closeModalOutside(event)">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="modalTitle">Project Preview</div>
+          <div class="modal-url" id="modalUrl"></div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-loading" id="modalLoading">
+        <div class="spinner"></div>
+        <span>Loading project…</span>
+      </div>
+      <iframe class="modal-iframe" id="modalFrame"
+        src="about:blank" style="display:none" onload="onFrameLoad()">
+      </iframe>
+    </div>
+  </div>
+
+</section>

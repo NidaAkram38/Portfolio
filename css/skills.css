@@ -1,0 +1,55 @@
+/* ================================================
+   skills.css — Skills & Technologies Section
+   ================================================ */
+
+#skills {
+  background: var(--white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  background: var(--light);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: default;
+}
+.skill-card:hover {
+  border-color: var(--blue);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 108, 246, 0.12);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Progress bar */
+.skill-level {
+  margin-top: 8px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--sky));
+  border-radius: 2px;
+  width: 0;                       /* animated to data-width via JS */
+  transition: width 1.2s ease;
+}

@@ -1,0 +1,245 @@
+/* ================================================
+   projects.css — Projects Section & Preview Modal
+   ================================================ */
+
+#projects {
+  background: var(--white);
+}
+
+/* ── Projects Grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ── Card ── */
+.project-card {
+  background: var(--light);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--blue);
+}
+
+/* ── Iframe Preview Thumbnail ── */
+.project-preview-wrap {
+  position: relative;
+}
+
+.project-preview {
+  width: 100%;
+  height: 200px;
+  border: none;
+  background: #f0f4ff;
+  display: block;
+  pointer-events: none;
+}
+
+/* Hover overlay with launch button */
+.project-preview-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: rgba(10, 15, 44, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.project-card:hover .project-preview-overlay {
+  opacity: 1;
+  background: rgba(10, 15, 44, 0.6);
+}
+
+.preview-launch-btn {
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.project-card:hover .preview-launch-btn {
+  transform: scale(1);
+}
+
+/* ── Card Info ── */
+.project-info {
+  padding: 20px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(26, 108, 246, 0.08);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.project-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Small action buttons */
+.proj-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  cursor: pointer;
+}
+.proj-btn-primary {
+  background: var(--blue);
+  color: white;
+}
+.proj-btn-primary:hover {
+  background: #1557d4;
+}
+.proj-btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+.proj-btn-ghost:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ── Preview Modal ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(10, 15, 44, 0.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--white);
+  border-radius: 16px;
+  width: 92vw;
+  max-width: 960px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--navy);
+}
+.modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+.modal-url {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.modal-iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}

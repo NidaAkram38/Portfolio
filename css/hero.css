@@ -1,0 +1,146 @@
+/* ================================================
+   hero.css — Hero / Home Section
+   ================================================ */
+
+#home {
+  min-height: 100vh;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 5% 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background glow */
+#home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(26, 108, 246, 0.25) 0%,
+    transparent 70%
+  );
+}
+
+/* Subtle grid overlay */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+/* ── Avatar ── */
+.hero-avatar-wrap {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--gold), var(--sky));
+  box-shadow:
+    0 0 40px rgba(90, 173, 255, 0.4),
+    0 0 80px rgba(26, 108, 246, 0.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.hero-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--navy);
+}
+
+/* Placeholder shown when no photo is set */
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a3a8f, #0a0f2c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--sky);
+}
+
+/* ── Text ── */
+.hero-caption {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.hero-name span {
+  color: var(--gold);
+}
+
+/* About blurb */
+.hero-bio {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 20px 28px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.hero-bio strong {
+  color: var(--sky);
+}
+
+/* Quote */
+.hero-quote {
+  background: rgba(26, 108, 246, 0.15);
+  border: 1px solid rgba(90, 173, 255, 0.2);
+  border-left: 4px solid var(--sky);
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+/* Social buttons */
+.hero-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

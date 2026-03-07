@@ -1,0 +1,141 @@
+/* ================================================
+   global.css — CSS Variables, Reset & Shared Styles
+   ================================================ */
+
+/* ── CSS Variables ── */
+:root {
+  --navy:   #0a0f2c;
+  --blue:   #1a6cf6;
+  --sky:    #5aadff;
+  --gold:   #f5c842;
+  --light:  #f4f6fb;
+  --white:  #ffffff;
+  --text:   #1e2340;
+  --muted:  #6b7280;
+  --border: #e2e8f0;
+  --grad:   linear-gradient(135deg, #0a0f2c 0%, #1a3a8f 100%);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── Section Base ── */
+section {
+  padding: 80px 5%;
+}
+
+/* ── Section Header Utilities ── */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.divider {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--sky));
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* ── Shared Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: #1557d4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 108, 246, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── Scroll Fade Animation ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding: 28px 5%;
+  font-size: 0.85rem;
+}
+footer strong {
+  color: var(--sky);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 5%;
+  }
+}
