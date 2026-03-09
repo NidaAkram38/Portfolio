@@ -1,102 +1,447 @@
 <section id="projects">
   <div class="fade-up">
     <span class="section-label">My Work</span>
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-sub">Click "Live Preview" on any project to see it running right here.</p>
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-sub">A collection of projects I've built across web, desktop, and scripting.</p>
     <div class="divider"></div>
   </div>
 
-  <div class="projects-grid fade-up">
+  <div class="projects-list fade-up">
 
-<!-- ── PROJECT 1 ── -->
-<div class="project-card">
-  <div class="project-info">
-    <div class="project-tags">
-      <span class="project-tag">HTML</span>
-      <span class="project-tag">CSS</span>
-      <span class="project-tag">JS</span>
-      <span class="project-tag">PHP</span>
-    </div>
-    <div class="project-name">Resume Builder</div>
-    <div class="project-desc">
-      A clean, fast, and completely free resume builder for students and job seekers.
-      Built with vanilla HTML, CSS, and JavaScript and PHP — no frameworks, no bloat.
-    </div>
-    <div class="project-links">
-      <button class="proj-btn proj-btn-primary"
-        onclick="window.open('https://nidaakram38.github.io/Resume_Builder/', '_blank')">
-        ▶ Live Preview
-      </button>
-      <a href="https://github.com/nidaakram38/Resume_Builder"
-         target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── PROJECT 2 ── -->
-<div class="project-card">
-  <div class="project-info">
-    <div class="project-tags">
-      <span class="project-tag">HTML</span>
-      <span class="project-tag">CSS</span>
-      <span class="project-tag">JS</span>
-    </div>
-    <div class="project-name">Music Player</div>
-    <div class="project-desc">
-      A responsive music player built with HTML, CSS & JavaScript with playlist, 
-      volume control, and real-time progress bar.
-    </div>
-    <div class="project-links">
-      <button class="proj-btn proj-btn-primary"
-        onclick="window.open('https://nidaakram38.github.io/Music_Player/', '_blank')">
-        ▶ Live Preview
-      </button>
-      <a href="https://nidaakram38.github.io/Music_Player/"
-         target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── PROJECT 3 ── -->
-<div class="project-card">
-  <div class="project-info">
-    <div class="project-tags">
-      <span class="project-tag">Python</span>
-      <span class="project-tag">Flask</span>
-    </div>
-    <div class="project-name">Project Three</div>
-    <div class="project-desc">
-      A short description of what this project does and the problem it solves.
-    </div>
-    <div class="project-links">
-      <button class="proj-btn proj-btn-primary"
-        onclick="openModal('Project Three', 'https://YOUR_USERNAME.github.io/project-3')">
-        ▶ Live Preview
-      </button>
-      <a href="https://github.com/YOUR_USERNAME/project-3"
-         target="_blank" class="proj-btn proj-btn-ghost">⌥ GitHub</a>
-    </div>
-  </div>
-</div>
-    
-  <!-- Live Preview Modal -->
-  <div class="modal-overlay" id="previewModal" onclick="closeModalOutside(event)">
-    <div class="modal-box">
-      <div class="modal-header">
-        <div>
-          <div class="modal-title" id="modalTitle">Project Preview</div>
-          <div class="modal-url" id="modalUrl"></div>
+    <!-- PROJECT 1 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+          <span class="project-tag">PHP</span>
         </div>
-        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="project-name">Resume Builder</div>
+        <div class="project-desc">
+          A clean, fast, and completely free resume builder for students and job seekers.
+          Built with vanilla HTML, CSS, and JavaScript and PHP — no frameworks, no bloat.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://nidaakram38.github.io/Resume_Builder/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/nidaakram38/Resume_Builder"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
       </div>
-      <div class="modal-loading" id="modalLoading">
-        <div class="spinner"></div>
-        <span>Loading project…</span>
-      </div>
-      <iframe class="modal-iframe" id="modalFrame"
-        src="about:blank" style="display:none" onload="onFrameLoad()">
-      </iframe>
     </div>
-  </div>
 
+    <!-- PROJECT 2 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Music Player</div>
+        <div class="project-desc">
+          A responsive music player built with HTML, CSS & JavaScript with playlist,
+          volume control, and real-time progress bar.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://nidaakram38.github.io/Music_Player/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/nidaakram38/Music_Player"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Weather App</div>
+        <div class="project-desc">
+          A real-time weather application using OpenWeatherMap API. Shows temperature,
+          humidity, wind speed, and weather conditions for any city worldwide.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/weather-app/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/weather-app"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Quiz App</div>
+        <div class="project-desc">
+          An interactive quiz application with multiple categories, timer, score tracking,
+          and result summary. Built with pure JavaScript — no libraries needed.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/quiz-app/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/quiz-app"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Expense Tracker</div>
+        <div class="project-desc">
+          A personal finance tracker to add, categorize, and visualize daily expenses.
+          Features a dynamic chart and local storage to persist data across sessions.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/expense-tracker/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/expense-tracker"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 6 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">To-Do List App</div>
+        <div class="project-desc">
+          A clean task management app with add, edit, delete, and complete features.
+          Tasks are saved in local storage so nothing gets lost on refresh.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/todo-app/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/todo-app"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 7 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Calculator</div>
+        <div class="project-desc">
+          A fully functional calculator with standard and scientific modes. Supports
+          keyboard input, history log, and clean responsive layout.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/calculator/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/calculator"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 8 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Portfolio Website</div>
+        <div class="project-desc">
+          A responsive personal portfolio site with smooth scrolling, animations, and
+          sections for skills, projects, and contact. Fully mobile-friendly.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/portfolio/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/portfolio"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 9 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Typing Speed Test</div>
+        <div class="project-desc">
+          A browser-based typing speed tester that measures WPM and accuracy in real time.
+          Includes multiple difficulty levels and a results history panel.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/typing-test/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/typing-test"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 10 - Live Preview -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <div class="project-name">Image Gallery</div>
+        <div class="project-desc">
+          A filterable image gallery with lightbox preview, category filters, and smooth
+          CSS transitions. Images are lazy-loaded for better performance.
+        </div>
+        <div class="project-links">
+          <button class="proj-btn proj-btn-primary"
+            onclick="window.open('https://YOUR_USERNAME.github.io/image-gallery/', '_blank')">
+            ▶ Live Preview
+          </button>
+          <a href="https://github.com/YOUR_USERNAME/image-gallery"
+             target="_blank" class="proj-btn proj-btn-ghost">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 11 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">Swing</span>
+          <span class="project-tag">MySQL</span>
+        </div>
+        <div class="project-name">Library Management System</div>
+        <div class="project-desc">
+          A Java Swing desktop application with login/signup, book management,
+          staff/student records, and borrowing/fine system. Connected with MySQL database.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/library-management"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 12 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">OOP</span>
+        </div>
+        <div class="project-name">Interactive Cricket Scoreboard</div>
+        <div class="project-desc">
+          A lightweight cricket match simulator built with Python. Tracks players,
+          batsmen/bowler stats, runs, wickets, overs, and ball-by-ball outcomes.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/cricket-scoreboard"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 13 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">SQLite</span>
+        </div>
+        <div class="project-name">Student Result Portal</div>
+        <div class="project-desc">
+          A Flask web app where students can log in and view their semester results.
+          Admin panel for uploading and managing grade records via SQLite database.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/student-portal"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 14 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">C++</span>
+          <span class="project-tag">DSA</span>
+        </div>
+        <div class="project-name">Banking System (C++)</div>
+        <div class="project-desc">
+          A console-based banking system in C++ with account creation, deposits,
+          withdrawals, and transaction history using linked lists and file I/O.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/banking-system"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 15 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Tkinter</span>
+        </div>
+        <div class="project-name">Contact Book App</div>
+        <div class="project-desc">
+          A desktop contact manager built with Python and Tkinter. Add, search, edit,
+          and delete contacts with data stored in a local CSV file.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/contact-book"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 16 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">JDBC</span>
+          <span class="project-tag">MySQL</span>
+        </div>
+        <div class="project-name">Student Attendance System</div>
+        <div class="project-desc">
+          A Java desktop app for marking and tracking student attendance. Features
+          class-wise reports, monthly summaries, and a MySQL-backed database.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/attendance-system"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 17 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">File I/O</span>
+        </div>
+        <div class="project-name">Password Manager (CLI)</div>
+        <div class="project-desc">
+          A command-line password manager in Python with AES encryption. Save, retrieve,
+          and delete credentials securely with a master password system.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/password-manager"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 18 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">C</span>
+          <span class="project-tag">DSA</span>
+        </div>
+        <div class="project-name">Hospital Management System (C)</div>
+        <div class="project-desc">
+          A console-based hospital management program in C. Manages patient registration,
+          doctor assignments, ward allocation, and billing using structs and file handling.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/hospital-management"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 19 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Pandas</span>
+          <span class="project-tag">Matplotlib</span>
+        </div>
+        <div class="project-name">Sales Data Analyzer</div>
+        <div class="project-desc">
+          A data analysis script using Pandas and Matplotlib to process sales CSVs,
+          generate monthly trends, top products, and revenue breakdown charts.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/sales-analyzer"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 20 - View Code Only -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">OOP</span>
+        </div>
+        <div class="project-name">University Course Registration</div>
+        <div class="project-desc">
+          An OOP-based Java console application for course registration. Students can
+          enroll, drop, and view registered courses. Admins manage course availability.
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YOUR_USERNAME/course-registration"
+             target="_blank" class="proj-btn proj-btn-primary">⌥ View Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
