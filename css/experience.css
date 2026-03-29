@@ -1,0 +1,138 @@
+/* ================================================
+   experience.css — Experience Section
+   ================================================ */
+
+#experience {
+  background: var(--white);
+}
+
+/* ── Timeline ── */
+.experience-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--blue), var(--sky), transparent);
+}
+
+/* ── Item ── */
+.exp-item {
+  position: relative;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: all 0.5s ease;
+}
+.exp-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exp-dot {
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 3px rgba(26, 108, 246, 0.2);
+}
+
+/* ── Card ── */
+.exp-card {
+  background: var(--light);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 26px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.exp-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 8px 24px rgba(26, 108, 246, 0.1);
+}
+
+/* ── Header ── */
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.exp-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.exp-date {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--blue);
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── Bullet Points ── */
+.exp-points {
+  list-style: none;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.exp-points li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+.exp-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: 0.75rem;
+  top: 2px;
+}
+
+/* ── Tags ── */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.exp-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(26, 108, 246, 0.08);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
