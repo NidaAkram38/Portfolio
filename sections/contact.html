@@ -83,14 +83,41 @@
     </div>
 
     <!-- Right: Message Form -->
-   <form action="https://www.cognitoforms.com/NidaAkram/ContactFormForPortfolio" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your@email.com" required />
-  <textarea name="subject" placeholder="What's this about?" required></textarea>
-  <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
-  <button type="submit">Send Message</button>
+   <form class="contact-form" id="contactForm" 
+      action="https://formspree.io/f/xyzabcde" 
+      method="POST">
+
+  <input type="hidden" name="_subject" value="New message from Portfolio!" />
+  <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html" />
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" class="form-input" name="name" id="senderName" placeholder="John Doe" required/>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" class="form-input" name="email" id="senderEmail" placeholder="john@example.com" required/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Subject</label>
+    <input type="text" class="form-input" name="subject" id="msgSubject" placeholder="Project Inquiry" required/>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea class="form-input" name="message" id="msgBody" placeholder="Tell me about your project..." required></textarea>
+  </div>
+
+  <button class="form-btn" type="submit" id="submitBtn">
+    Send Message →
+  </button>
+
 </form>
-      </button>
+        Send Message →
 
     </div>
 
