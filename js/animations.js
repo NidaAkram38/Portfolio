@@ -4,7 +4,6 @@
    ================================================ */
 
 document.addEventListener('sectionsLoaded', () => {
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -17,14 +16,19 @@ document.addEventListener('sectionsLoaded', () => {
         bar.style.width = bar.dataset.width + '%';
       });
 
-      /* Stagger timeline items */
+      /* Stagger timeline items (Education) */
       el.querySelectorAll('.timeline-item').forEach((item, i) => {
         setTimeout(() => item.classList.add('visible'), i * 150);
       });
+
+      /* Stagger experience items */
+      el.querySelectorAll('.exp-item').forEach((item, i) => {
+        setTimeout(() => item.classList.add('visible'), i * 150);
+      });
+
     });
   }, { threshold: 0.12 });
 
   /* Observe every .fade-up element */
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
 });
