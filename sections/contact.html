@@ -83,31 +83,13 @@
     </div>
 
     <!-- Right: Message Form -->
-    <div class="contact-form" id="contactForm">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" class="form-input" id="senderName" placeholder="John Doe"/>
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" class="form-input" id="senderEmail" placeholder="john@example.com"/>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Subject</label>
-        <input type="text" class="form-input" id="msgSubject" placeholder="Project Inquiry"/>
-      </div>
-
-      <div class="form-group">
-        <label>Message</label>
-        <textarea class="form-input" id="msgBody" placeholder="Tell me about your project..."></textarea>
-      </div>
-
-      <button class="form-btn" id="submitBtn" onclick="handleFormSubmit()">
-        Send Message →
+   <form action="https://www.cognitoforms.com/NidaAkram/ContactFormForPortfolio" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your@email.com" required />
+  <textarea name="subject" placeholder="What's this about?" required></textarea>
+  <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+  <button type="submit">Send Message</button>
+</form>
       </button>
 
     </div>
