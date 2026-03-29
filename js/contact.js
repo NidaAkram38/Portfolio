@@ -1,43 +1,40 @@
 /* ================================================
-   contact.js — Contact Form Handler
+   contact.js — Contact Form Handler (Formspree)
    ================================================ */
-
 document.addEventListener('sectionsLoaded', () => {
 
-  window.handleFormSubmit = function () {
-    const name    = document.getElementById('senderName')?.value.trim();
-    const email   = document.getElementById('senderEmail')?.value.trim();
-    const subject = document.getElementById('msgSubject')?.value.trim();
-    const body    = document.getElementById('msgBody')?.value.trim();
-    const btn     = document.getElementById('submitBtn');
+  const form = document.getElementById('contactForm');
+  if (!form) return;
 
-    /* Basic validation */
-    if (!name || !email || !body) {
-      btn.textContent   = '⚠ Please fill all fields';
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('thankYouMsg').style.display = 'block';
+    } else {
+      btn.textContent = '⚠ Something went wrong!';
       btn.style.background = '#ef4444';
-      btn.style.color      = 'white';
-      setTimeout(() => resetBtn(btn), 2500);
-      return;
+      btn.style.color = 'white';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3000);
     }
-
-    /* ── Option A: Open user's mail client ── */
-    const mailto = `mailto:nida@example.com`
-      + `?subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}`
-      + `&body=${encodeURIComponent(`Hi Nida,\n\n${body}\n\n— ${name} (${email})`)}`;
-    window.location.href = mailto;
-
-    /* ── Option B: Replace the line above with a fetch() to your backend / EmailJS ── */
-
-    btn.textContent      = '✓ Message Sent!';
-    btn.style.background = '#22c55e';
-    btn.style.color      = 'white';
-    setTimeout(() => resetBtn(btn), 3000);
-  };
-
-  function resetBtn(btn) {
-    btn.textContent      = 'Send Message →';
-    btn.style.background = '';
-    btn.style.color      = '';
-  }
+  });
 
 });
