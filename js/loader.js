@@ -4,14 +4,15 @@
    ================================================ */
 
 const sections = [
-  { id: 'navbar-placeholder',        file: 'sections/navbar.html'         },
-  { id: 'hero-placeholder',          file: 'sections/hero.html'           },
-  { id: 'skills-placeholder',        file: 'sections/skills.html'         },
-  { id: 'education-placeholder',     file: 'sections/education.html'      },
-  { id: 'certifications-placeholder',file: 'sections/certifications.html' },
-  { id: 'hobbies-placeholder',       file: 'sections/hobbies.html'        },
-  { id: 'projects-placeholder',      file: 'sections/projects.html'       },
-  { id: 'contact-placeholder',       file: 'sections/contact.html'        },
+  { id: 'navbar-placeholder',         file: 'sections/navbar.html'         },
+  { id: 'hero-placeholder',           file: 'sections/hero.html'           },
+  { id: 'skills-placeholder',         file: 'sections/skills.html'         },
+  { id: 'education-placeholder',      file: 'sections/education.html'      },
+  { id: 'experience-placeholder',     file: 'sections/experience.html'     },
+  { id: 'certifications-placeholder', file: 'sections/certifications.html' },
+  { id: 'hobbies-placeholder',        file: 'sections/hobbies.html'        },
+  { id: 'projects-placeholder',       file: 'sections/projects.html'       },
+  { id: 'contact-placeholder',        file: 'sections/contact.html'        },
 ];
 
 async function loadSection({ id, file }) {
