@@ -47,6 +47,14 @@ nav {
   color: var(--sky);
 }
 
+.nav-resume-link {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+.nav-resume-link:hover {
+  color: #e6b83a !important;
+}
+
 /* Hamburger (mobile) */
 .hamburger {
   display: none;
