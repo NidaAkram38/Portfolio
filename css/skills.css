@@ -3,7 +3,7 @@
    ================================================ */
 
 #skills {
-  background: var(--white);
+  background: var(--navy);
 }
 
 .skills-grid {
@@ -13,8 +13,8 @@
 }
 
 .skill-card {
-  background: var(--light);
-  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 20px 16px;
   text-align: center;
@@ -22,27 +22,38 @@
   cursor: default;
 }
 .skill-card:hover {
-  border-color: var(--blue);
+  border-color: var(--sky);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(26, 108, 246, 0.12);
+  box-shadow: 0 8px 24px rgba(26, 108, 246, 0.18);
 }
 
 .skill-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
-  margin-bottom: 8px;
+}
+.skill-icon img {
+  width: 26px;
+  height: 26px;
 }
 
 .skill-name {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Progress bar */
 .skill-level {
   margin-top: 8px;
   height: 3px;
-  background: var(--border);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 2px;
   overflow: hidden;
 }
