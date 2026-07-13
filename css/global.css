@@ -29,8 +29,8 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--light);
-  color: var(--text);
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.85);
   overflow-x: hidden;
 }
 
@@ -54,14 +54,14 @@ section {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 12px;
   line-height: 1.2;
 }
 
 .section-sub {
   font-size: 1rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.6);
   max-width: 560px;
   line-height: 1.6;
   margin-bottom: 48px;
@@ -108,6 +108,17 @@ section {
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-2px);
+}
+
+.btn-resume {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+}
+.btn-resume:hover {
+  background: #e6b83a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 200, 66, 0.4);
 }
 
 /* ── Scroll Fade Animation ── */
