@@ -3,7 +3,7 @@
    ================================================ */
 
 #certifications {
-  background: var(--white);
+  background: #10173f;
 }
 
 .cert-grid {
@@ -13,8 +13,8 @@
 }
 
 .cert-card {
-  background: var(--light);
-  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 24px;
   display: flex;
@@ -25,7 +25,7 @@
 .cert-card:hover {
   border-color: var(--gold);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(245, 200, 66, 0.12);
+  box-shadow: 0 8px 24px rgba(245, 200, 66, 0.18);
 }
 
 .cert-icon {
@@ -43,11 +43,11 @@
 .cert-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 4px;
 }
 
 .cert-issuer {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.55);
 }
