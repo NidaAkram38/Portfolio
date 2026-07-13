@@ -3,7 +3,7 @@
    ================================================ */
 
 #hobbies {
-  background: var(--light);
+  background: var(--navy);
 }
 
 .hobbies-flex {
@@ -16,19 +16,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--white);
-  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   padding: 10px 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.85);
   transition: all 0.25s;
   cursor: default;
 }
 .hobby-pill:hover {
-  border-color: var(--blue);
-  background: rgba(26, 108, 246, 0.05);
+  border-color: var(--sky);
+  background: rgba(90, 173, 255, 0.1);
   transform: translateY(-2px);
 }
 
