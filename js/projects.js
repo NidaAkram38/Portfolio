@@ -34,6 +34,7 @@ window.closeModal = function () {
 
 /* Close when clicking backdrop */
 window.closeModalOutside = function (e) {
+
   if (e.target === document.getElementById('previewModal')) closeModal();
 };
 
